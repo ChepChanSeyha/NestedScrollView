@@ -4,12 +4,14 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_dialog.*
 import kotlinx.android.synthetic.main.activity_dialog.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val spinnerLocation = arrayOf("Location", "Phnom Penh", "Siem Reap", "Kompot")
-        location.adapter = ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, spinnerLocation)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, spinnerLocation)
+        location.adapter = adapter
 
         val spinnerVehicle = arrayOf("Vehicle", "TUK TUK", "SUV", "Motorbike")
         vehicle.adapter = ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, spinnerVehicle)
@@ -30,30 +33,43 @@ class MainActivity : AppCompatActivity() {
             val mAlertDialog = mBuilder.show()
 
             val name = mDialog.findViewById<TextView>(R.id.var_name)
-            name.text = first_name.text.toString()
+            val add = mDialog.findViewById<TextView>(R.id.var_address)
+            val pho = mDialog.findViewById<TextView>(R.id.var_phone)
+            val loca = mDialog.findViewById<TextView>(R.id.var_location)
+            val vehi = mDialog.findViewById<TextView>(R.id.var_vehicle)
+            val gend = mDialog.findViewById<TextView>(R.id.var_gender)
+            val favor = mDialog.findViewById<TextView>(R.id.var_favorite)
 
-//            val fName = mDialog.findViewById<EditText>(R.id.first_name).text.toString()
-//            val lName = mDialog.findViewById<EditText>(R.id.last_name).text.toString()
-//            val address = mDialog.findViewById<EditText>(R.id.address).text.toString()
-//            val phone = mDialog.findViewById<EditText>(R.id.phone).text.toString()
-//            val location = mDialog.findViewById<Spinner>(R.id.location).toString()
-//            val vehicle = mDialog.findViewById<Spinner>(R.id.vehicle).toString()
-//            val gender = mDialog.findViewById<RadioGroup>(R.id.gender).toString()
-//            val favorite = mDialog.findViewById<TableRow>(R.id.favorite).toString()
-//
-//            var_name.text = "$fName $lName"
-//            var_address.text = address
-//            var_phone.text = phone
-//            var_location.text = location
-//            var_vehicle.text = vehicle
-//            var_gender.text = gender
-//            var_favorite.text = favorite
+            name.text = first_name.text.toString()+ " " + last_name.text.toString()
+            add.text = address.text.toString()
+            pho.text = phone.text.toString()
+            location.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+                override fun onItemSelected(parent:AdapterView<*>, view: View, position: Int, id: Long){
+                    // Display the selected item text on text view
+                    loca.text = parent.getItemAtPosition(position).toString()
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>){
+                    // Another interface callback
+                }
+            }
+            vehicle.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+                override fun onItemSelected(parent:AdapterView<*>, view: View, position: Int, id: Long){
+                    // Display the selected item text on text view
+                    vehi.text = parent.getItemAtPosition(position).toString()
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>){
+                    // Another interface callback
+                }
+            }
+
 
             mDialog.btn_save.setOnClickListener {
                 mAlertDialog.dismiss()
             }
         }
 
-
     }
+
 }
