@@ -96,52 +96,55 @@
                 <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Phone " android:id="@+id/phone"/>
+                        android:hint="Phone " android:id="@+id/phone"
+                android:inputType="phone"/>
             </com.google.android.material.textfield.TextInputLayout>
             <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:dropDownWidth="wrap_content" android:layout_marginTop="10dp"
-                    android:background="@drawable/border">
+                    android:background="@drawable/border"
+                    android:dropDownWidth="wrap_content"
+                    android:layout_marginTop="10dp">
 
             </androidx.appcompat.widget.AppCompatSpinner>
             <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/vehicle"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp" android:layout_marginTop="10dp" android:background="@drawable/border">
+                    android:background="@drawable/border"
+                    android:layout_height="50dp" android:layout_marginTop="10dp">
 
             </androidx.appcompat.widget.AppCompatSpinner>
-            <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="10dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:background="@drawable/border">
+            <!--<RadioGroup-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="10dp"-->
+                    <!--style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+                    <!--android:background="@drawable/border">-->
                 <RadioGroup
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
-                        android:gravity="center_vertical" android:id="@+id/gender">
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/border"
+                        android:gravity="center_vertical"
+                        android:id="@+id/gender">
                     <RadioButton
                             android:text="Female"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/radioButton1"
-                            android:layout_weight="1"
-                    />
+                            android:layout_height="wrap_content" android:id="@+id/female"
+                            android:layout_weight="1"/>
                     <RadioButton
                             android:text="Male"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/radioButton2"
-                            android:layout_weight="1"
-                    />
+                            android:layout_height="wrap_content" android:id="@+id/male"
+                            android:layout_weight="1"/>
                     <RadioButton
                             android:text="Other"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/radioButton3"
-                            android:layout_weight="1"
-                    />
+                            android:layout_height="wrap_content" android:id="@+id/other"
+                            android:layout_weight="1"/>
                 </RadioGroup>
-            </RadioGroup>
+            <!--</RadioGroup>-->
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="150dp"
@@ -155,35 +158,37 @@
                     android:textColor="@android:color/black" android:layout_marginTop="20dp" android:textStyle="bold"/>
             <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:layout_marginTop="15dp" android:id="@+id/favorite">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/favorite">
 
                 <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
                     <CheckBox
                             android:text="Reading"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/checkBox7" android:layout_weight="1"/>
+                            android:layout_height="wrap_content" android:id="@+id/reading" android:layout_weight="1"/>
                     <CheckBox
                             android:text="Spot"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/checkBox8" android:layout_weight="1"/>
+                            android:layout_height="wrap_content" android:id="@+id/spot" android:layout_weight="1"/>
                     <CheckBox
                             android:text="Watch Movie"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/checkBox9" android:layout_weight="1"/>
+                            android:layout_height="wrap_content" android:id="@+id/watchMovie" android:layout_weight="1"/>
                 </TableRow>
                 <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
                     <CheckBox
                             android:text="Computer Game"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/checkBox1" android:layout_weight="1"/>
+                            android:layout_height="wrap_content" android:id="@+id/computerGame" android:layout_weight="1"/>
                     <CheckBox
                             android:text="Eating"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/checkBox2" android:layout_weight="1"/>
+                            android:layout_height="wrap_content" android:id="@+id/eating" android:layout_weight="1"/>
                     <CheckBox
                             android:text="Travel"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/checkBox10" android:layout_weight="1"
+                            android:layout_height="wrap_content" android:id="@+id/travel" android:layout_weight="1"
                     />
                 </TableRow>
             </TableLayout>

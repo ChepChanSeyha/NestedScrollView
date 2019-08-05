@@ -43,7 +43,7 @@
                     android:layout_height="50dp"
                     android:id="@+id/var_name"
                     android:gravity="center_vertical" android:textColor="@android:color/black"
-                    android:layout_weight="1" android:layout_marginLeft="50dp" android:text="null"/>
+                    android:layout_weight="1" android:layout_marginLeft="50dp"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp" android:id="@+id/var_address"
                     android:gravity="center_vertical" android:textColor="@android:color/black"
-                    android:layout_weight="1" android:layout_marginLeft="50dp" android:text="null"/>
+                    android:layout_weight="1" android:layout_marginLeft="50dp"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp" android:id="@+id/var_phone"
                     android:gravity="center_vertical" android:textColor="@android:color/black"
-                    android:layout_weight="1" android:layout_marginLeft="50dp" android:text="null"/>
+                    android:layout_weight="1" android:layout_marginLeft="50dp"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -88,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp" android:id="@+id/var_location"
                     android:gravity="center_vertical" android:textColor="@android:color/black"
-                    android:layout_weight="1" android:layout_marginLeft="50dp" android:text="null"/>
+                    android:layout_weight="1" android:layout_marginLeft="50dp"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp" android:id="@+id/var_vehicle"
                     android:gravity="center_vertical" android:textColor="@android:color/black"
-                    android:layout_weight="1" android:layout_marginLeft="50dp" android:text="null"/>
+                    android:layout_weight="1" android:layout_marginLeft="50dp"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -118,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp" android:id="@+id/var_gender"
                     android:gravity="center_vertical" android:textColor="@android:color/black"
-                    android:layout_weight="1" android:layout_marginLeft="50dp" android:text="null"/>
+                    android:layout_weight="1" android:layout_marginLeft="50dp"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -133,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp" android:id="@+id/var_favorite"
                     android:gravity="center_vertical" android:textColor="@android:color/black"
-                    android:layout_weight="1" android:layout_marginLeft="50dp" android:text="null"/>
+                    android:layout_weight="1" android:layout_marginLeft="50dp"/>
         </LinearLayout>
         <Button
                 android:text="Save"
